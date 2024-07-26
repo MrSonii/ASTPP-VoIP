@@ -1,0 +1,55 @@
+.wrapper {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000b3;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caller-containder {
+  min-width: 30vw;
+  max-width: 500px;
+  height: 95%;
+  border-radius: 8px;
+  background-color: rgb(5 5 73);
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.phone-search-input {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 2vw;
+  text-align: center;
+  background: transparent;
+  color: #b7b7b7;
+  outline: 0;
+  border: 0;
+  caret-color: transparent; /* Hides the caret */
+}
+
+.dial-pad {
+  width: 100%;
+  /* height: auto; */
+}
+
+.hover-search-bg:hover {
+  background-color: #797979a1;
+  border-radius: 12px;
+}
+
+.search-result {
+  height: 25vh;
+  overflow: auto;
+}
+
+.hover-search-bg {
+  color: #b7b7b7;
+}

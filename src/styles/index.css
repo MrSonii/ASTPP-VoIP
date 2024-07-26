@@ -1,0 +1,119 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/banner/login_bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.login-contianer {
+  padding: 40px 20px;
+  background: white;
+  border-radius: 8px;
+  width: 25vw;
+}
+
+.login-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 25%;
+}
+
+.welcome-greet {
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.grey {
+  color: gray;
+}
+
+.sign-in {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(40, 78, 123, 0.9) 0%, #2871b9 100%);
+  color: white;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+.sign-in:disabled {
+  width: 100%;
+  background: lightgrey;
+  color: darkgray;
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+.g-sign-in {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.navBar-cont {
+  width: 15%;
+  height: 100%;
+  background-color: rgb(5 5 73);
+}
+
+.dash-body {
+  width: 85%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.dash-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+@media (max-width: 1250px) {
+  .login-contianer {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-contianer {
+    width: 60vw;
+  }
+
+  .navBar-cont {
+    width: 25%;
+  }
+  
+  .dash-body {
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-contianer {
+    width: 60vw;
+  }  
+}

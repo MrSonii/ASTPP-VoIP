@@ -1,0 +1,26 @@
+.menu-Icon {
+  transform: rotate(90deg);
+}
+
+.header {
+  padding: 1% 1.5%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  cursor: pointer;
+}
+
+.call-icon {
+  border-radius: 50%;
+  background: rgb(5 5 73);
+}
+
+.title {
+  padding: 0.5% 1.5%;
+  font-weight: 500;
+  font-size: 20px;
+}

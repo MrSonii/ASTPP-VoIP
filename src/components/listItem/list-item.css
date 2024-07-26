@@ -1,0 +1,14 @@
+.list-item {
+  padding: 3% 10%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #b7b7b7;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.navBar .list-item:first-child {
+  background-color: rgba(41, 67, 137, 0.428);
+  border-radius: 8px;
+}

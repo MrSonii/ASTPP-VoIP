@@ -1,0 +1,23 @@
+.input-text-label {
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-text-field {
+  font-size: 14px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.input-text-field::placeholder {
+  color: gray;
+}
+
+.gray {
+  color: gray;
+}

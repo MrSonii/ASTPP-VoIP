@@ -1,0 +1,62 @@
+.user-card {
+  width: 15.7%;
+}
+
+.number {
+  color: gray;
+  font-size: 12px;
+}
+
+@media (max-width: 1660px) {
+  .user-card {
+    width: 15.6%;
+  }
+}
+
+@media (max-width: 1510px) {
+  .user-card {
+    width: 15.5%;
+  }
+}
+
+@media (max-width: 1385px) {
+  .user-card {
+    width: 15.4%;
+  } 
+}
+
+@media (max-width: 1315px) {
+  .user-card {
+    width: 18.7%;
+  } 
+}
+
+@media (max-width: 1200px) {
+  .user-card {
+    width: 23.5%;
+  } 
+}
+
+@media (max-width: 980px) {
+  .user-card {
+    width: 31.5%;
+  } 
+}
+
+@media (max-width: 900px) {
+  .user-card {
+    width: 31%;
+  } 
+}
+
+@media (max-width: 780px) {
+  .user-card {
+    width: 48%;
+  } 
+}
+
+@media (max-width: 580px) {
+  .user-card {
+    width: 100%;
+  } 
+}

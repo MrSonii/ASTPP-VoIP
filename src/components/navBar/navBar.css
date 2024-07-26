@@ -1,0 +1,15 @@
+.header-navBar {
+  padding: 10% 20%;
+}
+
+.header-logo {
+  width: 200px;
+}
+
+.navBar, .footer-tabs-navbar {
+  padding: 5% 10%;
+}
+
+.footer-tabs-navbar .list-item {
+  width: 100%;
+}
