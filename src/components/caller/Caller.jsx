@@ -30,7 +30,8 @@ function Caller({ handlePopUpTigger }) {
     if(!!dialing) {
       setUserSelected(null);
       setdialing(false);
-    } else {
+      setCallerInuput("");
+    } else if(callerInput){
       setUserSelected({name: callerInput, number: ""});
       setdialing(true);
     }
@@ -47,7 +48,7 @@ function Caller({ handlePopUpTigger }) {
             {!userSelected && <input type="text" className='phone-search-input' name="phone number" id="phone caller" onChange={handlePhoneInput} value={callerInput} placeholder='Enter Name/Number' autoFocus />}
             <div className='search-result'>
               {!!callerInput && !userSelected ? filteredProfiles.map(prof => 
-                <div className='px-8 py-2 hover-search-bg mx-4 flex' onClick={handleCall(prof)}>
+                <div className='px-8 py-2 hover-search-bg mx-4 flex' onClick={handleCall(prof)} key={prof.number}>
                   <div>
                     <img src={prof.profilePic} alt="User Pic" width={50} className='rounded-full'/>
                   </div>

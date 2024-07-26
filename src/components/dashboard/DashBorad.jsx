@@ -24,7 +24,7 @@ function DashBorad() {
         </div>
       </div>
       <div className="flex justify-start flex-wrap gap-4 py-4">
-        {users.map(user => <UserCard {...user}/>)}
+        {users.map(user => <UserCard {...user} key={user.number}/>)}
       </div>
     </div>
   )

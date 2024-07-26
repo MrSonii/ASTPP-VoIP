@@ -12,9 +12,9 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const [ extnsionNumber, setEmail ] = useState("");
-  const [ passCode, setPassCode ] = useState("");
-  const [ credValid, setCredValid ] = useState(undefined);
+  const [ extnsionNumber, setEmail ] = useState<string>("");
+  const [ passCode, setPassCode ] = useState<string>("");
+  const [ credValid, setCredValid ] = useState<boolean>(false);
 
   const defaultUser = useAppSelector(state => state.counter.defaultUser);
 
