@@ -15,17 +15,20 @@ export default function Home() {
   const [ extnsionNumber, setEmail ] = useState<string>("");
   const [ passCode, setPassCode ] = useState<string>("");
   const [ credValid, setCredValid ] = useState<boolean>(false);
+  const [ validationChecked, setValidationChecked ] = useState<boolean>(false);
 
   const defaultUser = useAppSelector(state => state.counter.defaultUser);
 
   const handleSignIn = () => {
     if(extnsionNumber === defaultUser.extensionNumber && passCode === defaultUser.passCode) {
       setCredValid(true);
+      setValidationChecked(true)
       setTimeout(() => {
         router.push(`/userDashboard/${defaultUser.extensionNumber}`);
       }, 500);
     } else {
       setCredValid(false);
+      setValidationChecked(true)
     }
   };
 
@@ -46,7 +49,7 @@ export default function Home() {
             <Input type="text" htmlFor="passcode" label="Password (hint-1234)" placeholder="Enter password" name="passcode" value={passCode} forgotPass={true} onChange={(e:any) => setPassCode(e.target.value)}/>
           </div>
 
-          {credValid === true ? <small className="green">Signed In</small> : credValid === false && <small className="red">Please enter valid credentials</small>}
+          {credValid === true && validationChecked ? <small className="green">Signed In</small> : credValid === false && validationChecked && <small className="red">Please enter valid credentials</small>}
 
           <button className="sign-in" onClick={handleSignIn} disabled={!extnsionNumber || !passCode}>Sign In</button>
 
