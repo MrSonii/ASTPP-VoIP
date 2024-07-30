@@ -48,6 +48,12 @@
 .search-result {
   height: 25vh;
   overflow: auto;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.search-result::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 .hover-search-bg {
