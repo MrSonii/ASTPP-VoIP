@@ -12,20 +12,22 @@ function DashBorad() {
   const [ users, setUsers ] = useState(usersRedux);
   const [ searchVal, setSearchVal ] = useState("");
 
-  const handleSearch = e => setSearchVal(e.target.value);
+  const handleSearch = e => {
+    const filteredProfiles = usersRedux.filter(profile => 
+        profile.name.toLowerCase().includes(e.target.value.toLowerCase()) || profile.number.toLowerCase().includes(e.target.value.toLowerCase())
+      ).sort((a, b) => a.name.localeCompare(b.name));
 
-  const filteredProfiles = React.useMemo(() => {
-    return users.filter(profile => 
-      profile.name.toLowerCase().includes(searchVal.toLowerCase()) || profile.number.toLowerCase().includes(searchVal.toLowerCase())
-    ).sort((a, b) => a.name.localeCompare(b.name));
-  }, [searchVal]);
+    setSearchVal(e.target.value);
+    setUsers(e.target.value ? filteredProfiles : usersRedux);
+  };
+
 
   return (
     <div className="p-4 dashboard-cont">
       <div className="flex justify-between items-center bg-white p-3 rounded-lg">
         <div className="relative">
-          <img src={SEARCH} alt="Search Icon" className="search-icon" onChange={handleSearch} value={searchVal} />
-          <input type="text" name="search input" className="search-input" placeholder="Search team" />
+          <img src={SEARCH} alt="Search Icon" className="search-icon" />
+          <input type="text" name="search input" className="search-input" placeholder="Search team" onChange={handleSearch} value={searchVal} />
         </div>
         <div>
           <select name="" id="" className="select-drop">
@@ -35,7 +37,7 @@ function DashBorad() {
         </div>
       </div>
       <div className="flex justify-start flex-wrap gap-4 py-4">
-        {filteredProfiles.map(user => <UserCard {...user} key={user.number}/>)}
+        {users.map(user => <UserCard {...user} key={user.number}/>)}
       </div>
     </div>
   )
