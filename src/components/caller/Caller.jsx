@@ -52,7 +52,7 @@ function Caller({ handlePopUpTigger }) {
                   <div>
                     <img src={prof.profilePic} alt="User Pic" width={50} className='rounded-full'/>
                   </div>
-                  <div className='pl-4'>
+                  <div className='pl-4 text-[#b7b7b7]'>
                     <div>{prof.name}</div>
                     <div>{prof.number}</div>
                   </div>
